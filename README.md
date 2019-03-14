@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ITSvit’s Comments SPA
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Задан стандартный шаблон Create React App.
+Вам необходимо создать SPA для работы с комментариями на ITSvit.
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   Create React App (v2+);
+-   React v16+;
+-   Axios;
+-   SASS/SCSS/Stylus;
+-   CRUD (Create / Read / Update / Delete).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Would be a plus
 
-### `npm test`
+-   Tests;
+-   Redux;
+-   React Router;
+-   TypeScript;
+-   Material UI.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
 
-### `npm run build`
+| Description                                         | Method | URL                                                       |
+| --------------------------------------------------- | ------ | --------------------------------------------------------- |
+| Перечень всех комментариев                          | GET    | http://comments.stage.itsvit.org/api/comments             |
+| Получить описание выбранного комментария            | GET    | http://comments.stage.itsvit.org/api/comments/{idComment} |
+| Создание нового комментария                         | POST   | http://comments.stage.itsvit.org/api/comments             |
+| Обновление текста или автора выбранного комментария | PUT    | http://comments.stage.itsvit.org/api/comments/{idComment} |
+| Удалить выбранный комментарий                       | DELETE | http://comments.stage.itsvit.org/api/comments/{idComment} |
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Создание нового комментария (params)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```json
+{
+    "author": "string",
+    "text": "string"
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Обновление текста или автора выбранного комментария (params)
 
-### `npm run eject`
+```json
+{
+    "author": "string",
+    "text": "string"
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Design
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Дизайн должен иметь схожую структуру, как показано на примере:
+![Image of Yaktocat](./template.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How to deliver?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Создать Pull Request на ветку master.
