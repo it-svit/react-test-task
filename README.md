@@ -2,12 +2,12 @@
 
 ## Description
 
-Задан стандартный шаблон Create React App.
+Задан стандартный шаблон Create React Index.
 Вам необходимо создать SPA для работы с комментариями на ITSvit.
 
 ## Requirements
 
--   Create React App (v2+);
+-   Create React Index (v2+);
 -   React v16+;
 -   Axios;
 -   SASS/SCSS/Stylus;

@@ -1,0 +1,58 @@
+.comment-editor {
+  background-color: rgba(0, 0, 0, 0.14);
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.comments {
+  width: 40%;
+  height: 100vh;
+  margin: 0;
+
+  #new-comment {
+    background: #006270;
+    color: #ffffff;
+  }
+
+  &__header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-box-shadow: 0 6px 30px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 6px 30px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 6px 30px 0 rgba(0,0,0,0.2);
+  }
+
+  &__list {
+    height: 90vh;
+    overflow: scroll;
+    padding: 0 !important;
+  }
+}
+
+.comment {
+  flex-wrap: wrap;
+  border-bottom: 1px solid #006270;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__author {
+    width: 80%;
+    font-weight: 600;
+  }
+}
